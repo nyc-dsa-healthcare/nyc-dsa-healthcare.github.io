@@ -1,0 +1,63 @@
+{% extends "base.html" %}
+
+{% block title %}{{ SITENAME }}{% endblock %}
+
+{% block content %}
+
+  <!-- ===== Hero / Splash ===== -->
+  <section class="site-hero">
+    <div class="container">
+      <div class="site-hero__wordmark">
+        NYC DSA
+        <span>Healthcare</span>
+        <span style="color: var(--color-muted); font-size: 0.45em; letter-spacing: -0.02em; font-weight: 600; display:block; margin-top: 0.5rem;">
+          Working Group
+        </span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Articles ===== -->
+  {% if articles_page.object_list %}
+  <section>
+    <div class="container">
+      <h2 class="section-title">Latest Updates</h2>
+      <div class="article-grid">
+        {% for article in articles_page.object_list %}
+        <a class="article-card" href="{{ SITEURL }}/{{ article.url }}">
+          <h2>{{ article.title }}</h2>
+          <time datetime="{{ article.date.isoformat() }}">{{ article.locale_date }}</time>
+          <p>{{ article.summary }}</p>
+        </a>
+        {% endfor %}
+      </div>
+
+      {% if articles_paginator.num_pages > 1 %}
+      <nav class="pagination">
+        {% if articles_page.has_previous() %}
+        <a href="{{ SITEURL }}/index{{ articles_page.previous_page_number() }}.html">&larr; Newer</a>
+        {% endif %}
+        <span style="color: var(--color-muted); font-size: 0.9rem;">
+          Page {{ articles_page.number }} of {{ articles_paginator.num_pages }}
+        </span>
+        {% if articles_page.has_next() %}
+        <a href="{{ SITEURL }}/index{{ articles_page.next_page_number() }}.html">Older &rarr;</a>
+        {% endif %}
+      </nav>
+      {% endif %}
+    </div>
+  </section>
+  {% endif %}
+
+  <!-- ===== Donate Strip ===== -->
+  {% if DONATE_URL is defined %}
+  <section class="donate-strip">
+    <div class="container">
+      <h2>Support Our Work</h2>
+      <p>Help us fight for universal healthcare in New York. Every contribution makes a difference.</p>
+      <a href="{{ DONATE_URL }}" class="btn-donate">Donate Now</a>
+    </div>
+  </section>
+  {% endif %}
+
+{% endblock %}

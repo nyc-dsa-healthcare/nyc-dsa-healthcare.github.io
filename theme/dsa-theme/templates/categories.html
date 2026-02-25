@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block title %}Categories – {{ SITENAME }}{% endblock %}
+
+{% block content %}
+<div class="container">
+  <header class="taxonomy-header">
+    <h1>Categories</h1>
+  </header>
+
+  <div class="taxonomy-list">
+    {% for cat, articles in categories %}
+    <a href="{{ SITEURL }}/{{ cat.url }}">
+      {{ cat }}
+      <span class="count">{{ articles | count }} article{{ 's' if articles | count != 1 }}</span>
+    </a>
+    {% endfor %}
+  </div>
+</div>
+{% endblock %}
