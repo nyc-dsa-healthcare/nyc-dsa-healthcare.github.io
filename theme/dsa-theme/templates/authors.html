@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block title %}Authors – {{ SITENAME }}{% endblock %}
+
+{% block content %}
+<div class="container">
+  <header class="taxonomy-header">
+    <h1>Authors</h1>
+  </header>
+
+  <div class="taxonomy-list">
+    {% for author, articles in authors %}
+    <a href="{{ SITEURL }}/{{ author.url }}">
+      {{ author }}
+      <span class="count">{{ articles | count }} article{{ 's' if articles | count != 1 }}</span>
+    </a>
+    {% endfor %}
+  </div>
+</div>
+{% endblock %}

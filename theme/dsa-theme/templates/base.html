@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="{{ DEFAULT_LANG }}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% block title %}{{ SITENAME }}{% endblock %}</title>
+  <link rel="stylesheet" href="{{ SITEURL }}/theme/css/style.css">
+  {% block extra_head %}{% endblock %}
+</head>
+<body>
+
+  <!-- ===== Navigation ===== -->
+  <header>
+    <nav class="site-nav">
+      <div class="container">
+        <ul class="nav-links">
+          <li><a href="{{ SITEURL }}/">Home</a></li>
+          {% for p in pages %}
+          <li><a href="{{ SITEURL }}/{{ p.url }}">{{ p.title }}</a></li>
+          {% endfor %}
+        </ul>
+
+        <div class="nav-actions">
+          {% if SOCIAL %}
+          <div class="nav-social">
+            {% for name, url in SOCIAL %}
+            <a href="{{ url }}" target="_blank" rel="noopener">{{ name }}</a>
+            {% endfor %}
+          </div>
+          {% endif %}
+
+          {% if DONATE_URL is defined %}
+          <a href="{{ DONATE_URL }}" class="btn-donate">Donate</a>
+          {% endif %}
+        </div>
+
+        <!-- Mobile: simple toggle label (CSS-only) -->
+        <span class="nav-mobile-toggle">☰</span>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ===== Main ===== -->
+  <main class="site-main">
+    {% block content %}{% endblock %}
+  </main>
+
+  <!-- ===== Footer ===== -->
+  <footer class="site-footer">
+    <div class="container">
+
+      <div class="footer-brand">
+        <div class="footer-wordmark">
+          NYC DSA
+          <span>Healthcare</span>
+        </div>
+      </div>
+
+      <nav class="footer-nav">
+        <h3>Navigation</h3>
+        <ul>
+          <li><a href="{{ SITEURL }}/">Home</a></li>
+          {% for p in pages %}
+          <li><a href="{{ SITEURL }}/{{ p.url }}">{{ p.title }}</a></li>
+          {% endfor %}
+        </ul>
+      </nav>
+
+      <div class="footer-connect">
+        <h3>Connect</h3>
+        <ul>
+          {% for name, url in LINKS %}
+          <li><a href="{{ url }}" target="_blank" rel="noopener">{{ name }}</a></li>
+          {% endfor %}
+          {% if SOCIAL %}
+          {% for name, url in SOCIAL %}
+          <li><a href="{{ url }}" target="_blank" rel="noopener">{{ name }}</a></li>
+          {% endfor %}
+          {% endif %}
+        </ul>
+      </div>
+
+      <div class="footer-copy">
+        &copy; {{ now.year if now is defined else "2024" }} NYC DSA Healthcare Working Group
+      </div>
+
+    </div>
+  </footer>
+
+</body>
+</html>

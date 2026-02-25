@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block title %}{{ tag }} – {{ SITENAME }}{% endblock %}
+
+{% block content %}
+<div class="container">
+  <header class="taxonomy-header">
+    <div class="taxonomy-label">Tag</div>
+    <h1>{{ tag }}</h1>
+  </header>
+
+  <div class="article-grid">
+    {% for article in articles %}
+    <a class="article-card" href="{{ SITEURL }}/{{ article.url }}">
+      <h2>{{ article.title }}</h2>
+      <time datetime="{{ article.date.isoformat() }}">{{ article.locale_date }}</time>
+      <p>{{ article.summary }}</p>
+    </a>
+    {% endfor %}
+  </div>
+</div>
+{% endblock %}

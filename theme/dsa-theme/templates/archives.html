@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block title %}Archives – {{ SITENAME }}{% endblock %}
+
+{% block content %}
+<div class="container">
+  <header class="taxonomy-header">
+    <h1>Archives</h1>
+  </header>
+
+  <div style="display: flex; flex-direction: column; gap: 1rem; margin-top: 1rem;">
+    {% for article in dates %}
+    <div style="display: flex; gap: 1.5rem; align-items: baseline; border-bottom: 1px solid var(--color-border); padding-bottom: 0.75rem;">
+      <time style="color: var(--color-muted); font-size: 0.875rem; white-space: nowrap;">
+        {{ article.locale_date }}
+      </time>
+      <a href="{{ SITEURL }}/{{ article.url }}"
+         style="font-weight: 600; transition: color 0.15s ease;"
+         onmouseover="this.style.color='var(--color-primary)'"
+         onmouseout="this.style.color='inherit'">
+        {{ article.title }}
+      </a>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+{% endblock %}

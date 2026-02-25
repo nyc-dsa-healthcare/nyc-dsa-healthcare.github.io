@@ -32,5 +32,11 @@ SOCIAL = (
 
 DEFAULT_PAGINATION = 10
 
+# Theme
+THEME = "theme/dsa-theme"
+
+# Donate link — used in nav and index page donate strip
+DONATE_URL = "https://chuffed.org/project/nyc-dsa-healthcare"
+
 # Uncomment following line if you want document-relative URLs when developing
 # RELATIVE_URLS = True
