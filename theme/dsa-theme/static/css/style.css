@@ -264,7 +264,7 @@ body {
 }
 .vision-kicker {
   font-family: var(--sans);
-  font-size: 10px;
+  font-size: 13px;
   font-weight: 700;
   letter-spacing: 0.22em;
   text-transform: uppercase;
@@ -337,7 +337,7 @@ body {
 }
 .events-section-label {
   font-family: var(--sans);
-  font-size: 10px;
+  font-size: 13px;
   font-weight: 700;
   letter-spacing: 0.2em;
   text-transform: uppercase;
@@ -467,7 +467,7 @@ body {
 }
 .news-section-label {
   font-family: var(--sans);
-  font-size: 10px;
+  font-size: 13px;
   font-weight: 700;
   letter-spacing: 0.2em;
   text-transform: uppercase;
@@ -544,13 +544,11 @@ body {
 }
 .substack-kicker {
   font-family: var(--sans);
-  font-size: 10px;
+  font-size: 13px;
   font-weight: 700;
   letter-spacing: 0.22em;
   text-transform: uppercase;
   color: var(--red);
-  border-top: 2px solid var(--red);
-  padding-top: 10px;
   margin-bottom: 16px;
   display: inline-block;
 }
@@ -587,7 +585,7 @@ body {
   pointer-events: none;
 }
 .join-inner { max-width: 680px; margin: 0 auto; position: relative; z-index: 1; }
-.join-kicker { font-family: var(--sans); font-size: 10px; font-weight: 700; letter-spacing: 0.22em; text-transform: uppercase; color: var(--red-tint); margin-bottom: 18px; }
+.join-kicker { font-family: var(--sans); font-size: 13px; font-weight: 700; letter-spacing: 0.22em; text-transform: uppercase; color: var(--red-tint); margin-bottom: 18px; }
 .join-title { font-family: var(--serif); font-size: clamp(30px, 4vw, 44px); font-weight: 900; color: var(--white); line-height: 1.08; letter-spacing: -0.02em; margin-bottom: 20px; }
 .join-body { font-family: var(--body-serif); font-size: 17px; font-style: italic; line-height: 1.6; color: rgba(255,255,255,0.6); margin-bottom: 36px; }
 .join-btns { display: flex; justify-content: center; gap: 14px; flex-wrap: wrap; }

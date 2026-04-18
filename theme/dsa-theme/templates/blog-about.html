@@ -87,39 +87,12 @@
   <main class="prose">
 
     <h2>What This Blog Is</h2>
-    <p><em>Beyond Diagnosis</em> is the blog of the NYC-DSA Healthcare Working Group. We are a vehicle for the working group to communicate with the public about the DSA's positions on healthcare policy and our reaction to healthcare news and events. We also aim to be a starting point for the non-DSA layperson to understand the healthcare landscape — and what socialist policies could offer for their daily lives.</p>
+    <p><em>Beyond Diagnosis</em> is the blog of the NYC-DSA Healthcare Working Group. It is a vehicle for the working group to communicate with the public about the NYC DSA's positions on healthcare policy and our reaction to healthcare news and events. We also aim to be a starting point for the non-DSA layperson to understand the healthcare landscape and what democratic socialist policies could offer for their daily lives.</p>
     <p>The name reflects our conviction that diagnosing the failures of the for-profit healthcare system, however necessary, is not enough. Every piece we publish is oriented toward solutions: what a better system looks like, how we get there, and what working people can do right now to build the power to win it.</p>
-    <p>We are not a neutral publication. We are socialists who believe healthcare is a human right, that the current system exists to extract profit from sick people, and that the only path to transformation runs through organized working-class power. We are upfront about that. We also hold ourselves to high standards of accuracy, evidence, and intellectual honesty — because our arguments are stronger when they are true.</p>
-
-    <h2>Types of Articles</h2>
-    <p>There are a few general categories of articles that are a good fit for the blog. Those include, but are not limited to:</p>
-    <ul>
-      <li><strong>Explanatory articles</strong> about a facet of our healthcare system, a healthcare policy, or a DSA action. These are "evergreen" and can be published at any time.</li>
-      <li><strong>Reactions to healthcare news</strong> or new policy. These should be submitted within 2–3 days of the news occurring.</li>
-      <li><strong>Novel research or analysis</strong> done by the healthcare working group or a working group member, including methodology, graphics, and data.</li>
-      <li><strong>Commentary</strong> on an article or piece of research published at another outlet or journal.</li>
-      <li><strong>Personal patient and/or healthcare worker stories</strong> about a failure of the healthcare system.</li>
-    </ul>
-    <p>Every article, regardless of type, should leave readers with a clear sense of why the subject matters and what they can do to take action in response.</p>
-
-    <h2>Writing Guidelines</h2>
-    <p>Articles should be written for the <strong>average layperson</strong>. Assume your reader is smart, but not an expert on healthcare or healthcare policy. Language should be clear and jargon-free. Articles should be <strong>600–800 words</strong>.</p>
-    <p>Articles should be written by humans, <strong>not by generative AI</strong>. All sources must be clearly cited. Plagiarism will not be tolerated.</p>
-    <p>All articles should address:</p>
-    <ul>
-      <li><strong>What</strong> happened or what the topic is</li>
-      <li><strong>Why</strong> it matters for the average person's health and daily life</li>
-      <li><strong>How</strong> to understand it through a socialist lens</li>
-      <li><strong>What</strong> the reader can do in response</li>
-      <li>Links to additional reading for those who want to go deeper</li>
-    </ul>
-
-    <h2>Editorial Standards</h2>
-
-    <p>All posts are reviewed by blog leadership before publication. After a pitch is accepted, you'll be paired with another working group member to discuss and refine your idea. After writing, articles go through peer review by another member and final editing by blog leadership. Contributors retain ownership of their work. We may edit for length, clarity, and style, and will communicate any substantive changes before publishing.</p>
+    <p>We are not a neutral publication. We are democratic socialists who believe healthcare is a human right, that the current system exists to extract profit from sick people, and that the only path to transformation runs through organized working-class power. The foundation of all our discussions, reactions, analyses, and stories is that it is rooted in what we believe are the policies that are most beneficial to the working class.</p>
 
     <h2>Pitch Us</h2>
-    <p>Please reach out to Joe Patrick and Tim Frasca if you have an idea for an article or blog post. Your pitch should include:</p>
+    <p>Please reach out to us if you have an idea for a blog post. Your pitch should include:</p>
     <ul>
       <li>What you want to write about and a suggested headline</li>
       <li>Why you want to write about this topic <strong>now</strong></li>
@@ -127,24 +100,24 @@
     </ul>
     <p>Pitches will be evaluated based on relevancy, fit with other ongoing articles, and consistency with the stated positions of the working group. We aim to respond within two weeks.</p>
 
-    <div class="pitch-form">
+    <form class="pitch-form" action="https://formspree.io/f/mwvaozea" method="POST">
       <div class="form-row" style="margin-bottom:16px;">
         <div class="form-group">
           <label for="pitch-name">Your Name</label>
-          <input type="text" id="pitch-name" placeholder="Full name">
+          <input type="text" id="pitch-name" name="name" placeholder="Full name">
         </div>
         <div class="form-group">
           <label for="pitch-email">Email Address</label>
-          <input type="email" id="pitch-email" placeholder="your@email.com">
+          <input type="email" id="pitch-email" name="email" placeholder="your@email.com">
         </div>
       </div>
       <div class="form-group">
         <label for="pitch-affiliation">Affiliation <span style="color:var(--ink-light);font-weight:400;text-transform:none;letter-spacing:0;">(optional — union local, org, title, etc.)</span></label>
-        <input type="text" id="pitch-affiliation" placeholder="e.g. DSA member, RN at Bellevue, NYSNA Local...">
+        <input type="text" id="pitch-affiliation" name="affiliation" placeholder="e.g. DSA member, RN at Bellevue, NYSNA Local...">
       </div>
       <div class="form-group">
         <label for="pitch-topic">Pitch Topic</label>
-        <select id="pitch-topic">
+        <select id="pitch-topic" name="topic">
           <option value="" disabled selected>Select a category</option>
           <option>Organizing / campaign update</option>
           <option>Labor / union politics</option>
@@ -158,10 +131,10 @@
       </div>
       <div class="form-group">
         <label for="pitch-body">Your Pitch</label>
-        <textarea id="pitch-body" placeholder="Describe your idea in 2–4 sentences. What's the argument, the angle, and why does it matter right now?"></textarea>
+        <textarea id="pitch-body" name="pitch" placeholder="Describe your idea in 2–4 sentences. What's the argument, the angle, and why does it matter right now?"></textarea>
       </div>
-      <button class="submit-btn">Send Pitch →</button>
-    </div>
+      <button type="submit" class="submit-btn">Send Pitch →</button>
+    </form>
 
   </main>
 
