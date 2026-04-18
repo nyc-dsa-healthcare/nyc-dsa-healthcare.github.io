@@ -57,7 +57,7 @@
       <a href="{{ SITEURL }}/pages/calendar.html">Events</a>
       <a href="{{ SITEURL }}/blog.html">Blog</a>
       {% for p in pages %}
-      {% if p.title not in ['NY Health Act', 'Calendar', 'About Beyond Diagnosis'] %}
+      {% if p.title not in ['NY Health Act', 'Events', 'Calendar', 'Blog', 'About Beyond Diagnosis'] %}
       <a href="{{ SITEURL }}/{{ p.url }}">{{ p.title }}</a>
       {% endif %}
       {% endfor %}
