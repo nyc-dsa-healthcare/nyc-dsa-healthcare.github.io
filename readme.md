@@ -162,7 +162,7 @@ By default, Pelican uses a simple theme. To use a custom theme, add to `pelicanc
 THEME = "path/to/theme"
 ```
 
-Or specify a GitHub repo in the GitHub Actions workflow (see `.github/workflows/pelican.yml`).
+Or specify a GitHub repo in the GitHub Actions Workflow (see `.github/workflows/pelican.yml`).
 
 ## License
 
